@@ -1,34 +1,17 @@
 'use client'
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { Button } from "@/components/ui/button"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+import html2pdf from 'html2pdf.js'
+import PDFGen from './pdf-gen/page'
 
-const formSchema = z.object({
-  username: z.string().min(2).max(50),
-})
-
-
+function handleOnClick() {
+  const element = document.querySelector('#devis');//.innerHTML;
+  // html2pdf().set().from(element).save();
+  html2pdf(element);
+}
 export default function Home() {
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
-  })
-
   return (
-    <div className="h-screen"></div>
+    <>
+      <PDFGen />
+      <button onClick={handleOnClick} className="p-5 m-5 border-2 border-black">PDF</button>
+    </>
   );
 }
