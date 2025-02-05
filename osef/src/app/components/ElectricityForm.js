@@ -16,7 +16,7 @@ export default function ElectricityForm() {
         { nom: "Prise", marque: "Le Petit", ratio: 4, prix: 9.99 },
         { nom: "Luminaire", marque: "Le Petit", ratio: 10, prix: 13.99 },
         { nom: "Disjoncteur 10A", marque: "Le Petit", ratio: 10, prix: 15.99 },
-        { nom: "Différentiel 30mA", marque: "Le Petit", ratio: null, prix: 24.99 },
+        { nom: "Différentiel 30mA", marque: "Le Petit", ratio: 80, prix: 24.99 },
     ];
 
     function genererProduits(surface) {
