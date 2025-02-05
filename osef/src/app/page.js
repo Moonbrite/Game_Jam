@@ -29,6 +29,6 @@ export default function Home() {
   })
 
   return (
-    <div></div>
+    <div className="h-screen"></div>
   );
 }
