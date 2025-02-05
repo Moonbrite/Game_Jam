@@ -4,14 +4,14 @@ import Footer from "./components/Footer";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" data-lt-installed="true">
       <body>
         <header>
-          <Header />
+          <Header data-lt-installed="true"/>
         </header>
         {children}
         <footer>
-          <Footer />
+          <Footer data-lt-installed="true"/>
         </footer>
       </body>
     </html>
